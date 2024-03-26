@@ -4,7 +4,7 @@
 
 #include "problem.h"
 
-void problem::add_rule(const std::__1::vector<std::pair<int, bool>>& rule)
+void problem::add_rule(const std::vector<std::pair<int, bool>>& rule)
 {
     int rule_number = _rules.size();
     _rules.emplace_back(rule);

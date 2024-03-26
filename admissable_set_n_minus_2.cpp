@@ -40,7 +40,7 @@ admissable_set_n_minus_2::admissable_set_n_minus_2(int m):
                     others.push_back(c[q]);
 
             for (int msk = 0; msk < 8; ++msk) {
-                std::__1::vector<std::pair<int, bool>> rule;
+                std::vector<std::pair<int, bool>> rule;
                 for (int q = 0; q < 3; ++q)
                     for (int r = 0; r < 3; ++r)
                         if (q != r) {
@@ -55,11 +55,11 @@ admissable_set_n_minus_2::admissable_set_n_minus_2(int m):
     logger() << "Part 2";
     for (auto& p: pairings)
         for (auto h = combinations(m, 6); !(h.finished()); ++h) {
-            std::__1::vector<std::pair<int, int>> pairs;
+            std::vector<std::pair<int, int>> pairs;
             for (auto pi: p)
                 pairs.emplace_back(1 + h[pi[0]], 1 + h[pi[1]]);
             for (int msk = 0; msk < 64; ++msk) {
-                std::__1::vector<std::pair<int, bool>> rule;
+                std::vector<std::pair<int, bool>> rule;
 
                 for (auto pair: pairs)
                     for (int i = 0; i < 6; ++i) {

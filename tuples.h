@@ -24,7 +24,9 @@ int func_2(int r)
 inverse_function func_1_inverse(func_1);
 inverse_function func_2_inverse(func_2);
 
-int tuple_to_int(const std::__1::pair<std::pair<int, int>, int>& tuple)
+
+
+int tuple_to_int(const std::pair<std::pair<int, int>, int>& tuple)
 {
     int a = tuple.first.first;
     int b = tuple.first.second;
@@ -35,7 +37,7 @@ int tuple_to_int(const std::__1::pair<std::pair<int, int>, int>& tuple)
     return func_1(largest) + func_2(middle) + 3 * (smallest - 1) + ((c == middle) ? 1 : (c == smallest) ? 2 : 0);
 }
 
-std::__1::pair<std::pair<int, int>, int> int_to_tuple(int n)
+std::pair<std::pair<int, int>, int> int_to_tuple(int n)
 {
     int largest = func_1_inverse.lookup(n);
     n -= func_1(largest);
