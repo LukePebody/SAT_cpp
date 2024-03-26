@@ -29,7 +29,7 @@ std::optional<std::set<int>> kissat::solve(const problem& p)
     file.close();
 
     // call kissat
-    int z = system("/Users/lukepebody/SAT/kissat/kissat/build/kissat temp.cnf > temp.out 2> temp.err");
+    int z = system("kissat temp.cnf > temp.out 2> temp.err");
 
     if (z == 5120)
     {
