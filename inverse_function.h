@@ -5,19 +5,20 @@
 #ifndef ADMISSABLE_SAT_INVERSE_FUNCTION_H
 #define ADMISSABLE_SAT_INVERSE_FUNCTION_H
 
-#include <set>
+#include <algorithm>
+#include <functional>
 #include <iostream>
 #include <map>
-#include <algorithm>
+#include <set>
 
 class inverse_function
 {
 private:
-    std::function<int(int)> _f;
+    const std::function<int(int)> _f;
     std::map<int, int> _m;
 
 public:
-    inverse_function(std::function<int(int)> f):
+    explicit inverse_function(const std::function<int(int)>& f):
         _f (f),
         _m {{0, 0}}
     {
