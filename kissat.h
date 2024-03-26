@@ -5,6 +5,7 @@
 #ifndef ADMISSABLE_SAT_KISSAT_H
 #define ADMISSABLE_SAT_KISSAT_H
 
+#include <optional>
 #include <set>
 #include <vector>
 #include "problem.h"

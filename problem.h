@@ -6,6 +6,7 @@
 #define ADMISSABLE_SAT_PROBLEM_H
 
 #include <map>
+#include <optional>
 #include <set>
 #include <vector>
 
